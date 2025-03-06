@@ -7,38 +7,8 @@ This project is an AI-powered movie booking assistant using **AutoGen Selector G
 ---
 
 ## Architecture Overview
-
                
-               
-                     +--------------------------------------+
-                     |          Flask Backend API          |
-                     +--------------------------------------+
-                                   |
-           ---------------------------------------------------
-           |                         |                       |
- +--------------------+    +--------------------+   +-------------------+
- |  Movie Booking    |    |  Movie Search      |   |  Membership Check  |
- |  Reservation API  |    |  Bing Search API   |   |  Semantic Kernel   |
- +--------------------+    +--------------------+   +-------------------+
-           |                         |                       |
-           |                         |                       |
-+--------------------+      +--------------------+   +----------------------+
-| MovieReservation  |      | MovieRecommendation |   | MembershipValidation |
-|     Agent        |      |      Agent         |   |        Agent        |
-+--------------------+      +--------------------+   +----------------------+
-           \                         |                      /
-            \                        |                     /
-             \------------------+-----------------------+
-                                |
-               +--------------------------------+
-               |  AutoGen Selector Group Chat  |
-               |  (Routes Queries to Agents)  |
-               +--------------------------------+
-                                |
-                  +-------------------------------+
-                  |        User Input Layer       |
-                  | (Flask API receives queries) |
-                  +-------------------------------+
+![Architecture Diagram](architecture.png)
 
 ---
 
